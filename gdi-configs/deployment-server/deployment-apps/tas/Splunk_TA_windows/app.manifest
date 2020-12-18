@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.0.0", 
+  "info": {
+    "title": "Splunk Add-on for Microsoft Windows", 
+    "id": {
+      "group": null, 
+      "name": "Splunk_TA_windows", 
+      "version": "8.0.0"
+    }, 
+    "author": [
+      {
+        "name": "Splunk, Inc.", 
+        "email": "support@splunk.com", 
+        "company": "Splunk, Inc."
+      }
+    ], 
+    "releaseDate": null, 
+    "description": "Splunk Add-on for Microsoft Windows", 
+    "classification": {
+      "intendedAudience": "IT", 
+      "categories": [
+        "IT Operations",
+        "Utilities",
+        "Security, Fraud & Compliance"
+      ], 
+      "developmentStatus": "Production/Stable"
+    }, 
+    "commonInformationModels": {
+        "Application_State": "=4.15.0",
+        "Change_Analysis": "=4.15.0",
+        "Event_Signatures":"=4.15.0",
+        "Endpoint":"=4.15.0",
+        "Change":"=4.15.0",
+        "Authentication": "=4.15.0",
+        "Compute_Inventory": "=4.15.0",
+        "Network_Sessions": "=4.15.0",
+        "Performance": "=4.15.0",
+        "Updates": "=4.15.0",
+        "Vulnerabilities": "=4.15.0"        
+    }, 
+    "license": {
+      "name": "Splunk Software License Agreement", 
+      "text": "license-eula.txt", 
+      "uri": "http://www.splunk.com/en_us/legal/splunk-software-license-agreement.html"
+    }, 
+    "privacyPolicy": {
+      "name": null, 
+      "text": null, 
+      "uri": null
+    }, 
+    "releaseNotes": {
+      "name": "README", 
+      "text": "README.txt", 
+      "uri": "http://docs.splunk.com/Documentation/WindowsAddOn/latest/User/Releasenotes"
+    }
+  }, 
+  "dependencies": null, 
+  "tasks": null, 
+  "inputGroups": null, 
+  "incompatibleApps": {
+    "Splunk_TA_microsoft_ad": "<=1.0.0",
+    "Splunk_TA_microsoft_dns": "<=1.0.1" 
+  }
+}
