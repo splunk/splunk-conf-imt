@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.0.0",
+  "info": {
+    "title": "Splunk Add-on for Unix and Linux",
+    "id": {
+      "group": null,
+      "name": "Splunk_TA_nix",
+      "version": "8.2.0"
+    },
+    "author": [
+      {
+        "name": "Splunk, Inc.",
+        "email": "support@splunk.com",
+        "company": "Splunk, Inc."
+      }
+    ],
+    "releaseDate": null,
+    "description": "Splunk Add-on for Unix and Linux",
+    "classification": {
+      "intendedAudience": "IT",
+      "categories":
+	  [
+	  "IT Operations",
+      "Utilities"
+	  ],
+      "developmentStatus": "Production/Stable"
+    },
+    "commonInformationModels":
+	{
+		"Performance": "=4.16.0",
+		"Network Sessions": "=4.16.0",
+		"Change": "=4.16.0",
+		"Inventory": "=4.16.0",
+		"Endpoint": "=4.16.0"
+	},
+    "license":
+	{
+		"name": "Splunk Software License Agreement",
+		"text": "license-eula.txt",
+		"uri": "http://www.splunk.com/en_us/legal/splunk-software-license-agreement.html"
+    },
+    "privacyPolicy":
+	{
+      "name": null,
+      "text": null,
+      "uri": null
+    },
+    "releaseNotes":
+	{
+      "name": "README",
+      "text": "README.txt",
+      "uri": "http://docs.splunk.com/Documentation/AddOns/released/UnixLinux/About"
+    }
+  },
+  "dependencies": null,
+  "tasks": null,
+  "inputGroups": null,
+  "incompatibleApps": null
+}
