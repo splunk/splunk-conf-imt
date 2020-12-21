@@ -1,0 +1,7 @@
+  
+  #The following monitor enables process monitoring out of SIM. The example below is monitoring the signalfx-agent process,
+  #but you can add additional process monitors or change this one to monitor other processes.
+  - type: collectd/processes
+    processes:
+      - signalfx-agent
+    collectContextSwitch: true
