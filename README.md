@@ -10,7 +10,16 @@ This section covers the steps that should be done before this app can be configu
 4. Ensure $SPLUNK_HOME is present and accurate on all Splunk instances (including UFs)
 
 # Installation Steps
-1. From DS perform the following
- a. git clone https://github.com/splunk/splunk-conf-imt.git
- b. cd splunk-conf-imt/
- c. ./deployment-configs/ds_deploy.sh
+1. Deploy configs to deployment server
+2. Deploy configs to indexers
+3. Deploy configs to SH
+4. Configure SIM TA with correct realm and token
+5. Run SIM terraform
+
+# Configure GDI
+1. TODO deployment server stuff
+
+# Usage Steps
+1. Navigate to Splunk IMT Quick Start app on SH
+2. Review use cases and procedures and click to view implementation
+3. Customize as appropriate for proof
