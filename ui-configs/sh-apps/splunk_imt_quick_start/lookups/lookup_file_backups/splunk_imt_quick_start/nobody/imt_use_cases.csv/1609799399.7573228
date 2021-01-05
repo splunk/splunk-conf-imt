@@ -1,0 +1,5 @@
+Use Case,Procedure,URL,Number,Column5,Column6
+Host Infrastructure Monitoring,Correlate degradations in infrastructure metrics with errors from logs/events on the host ,imt__correlate_degradations_in_infrastructure_metrics_with_errors_from_logsevents_on_the_host_,3,,
+Host Infrastructure Monitoring,"Realtime visibility of critical host metrics such as CPU, Disk, Memory, and Network utilization",https://app.signalfx.com/#/navigator/ESeApWZAgAA/collectd%20hosts,1,,
+Host Infrastructure Monitoring,"Search, view, and analyze all logs and events on the host","search?q=search%20index%3D*%20host%3D*%20source%20IN%20(""wineventlog*""%2C%20""%2Fvar%2F*""%2C%20""%2Fetc%2F*"")",2,,
+Host Infrastructure Monitoring,Alert when the host is down or stops reporting data,https://app.signalfx.com/#/detectors/ESeApWZAgAA?query=%5BSFx%5D%20Host%20has%20stopped%20reporting%20data%20for%20atleast%201%20minute,4,,

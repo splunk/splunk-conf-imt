@@ -1,0 +1,26 @@
+<dashboard>
+  <label>Splunk Infrastructure Monitoring &amp; Troubleshooting Use Cases</label>
+  <row>
+    <panel>
+      <table>
+        <search>
+          <query>| inputlookup imt_use_cases.csv
+| eval _url = URL
+| eval Example="Click to View"
+| sort "Use Case" Number
+| eval "Use Case" = 'Use Case'." - ".Number
+| table "Use Case" "Procedure" Example _url</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+        <drilldown>
+          <link target="_blank">
+            <![CDATA[$row._url|n$]]>
+          </link>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+</dashboard>

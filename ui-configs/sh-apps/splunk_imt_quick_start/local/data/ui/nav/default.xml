@@ -1,0 +1,11 @@
+<nav search_view="search">
+  <view name="IMT_Use_Cases" default='true' />
+  
+  <collection label="Core">
+    <view name="search" />
+    <view name="datasets" />
+    <view name="reports" />
+    <view name="alerts" />
+    <view name="dashboards" />
+  </collection>
+</nav>

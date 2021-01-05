@@ -1,0 +1,35 @@
+[app/ui]
+version = 8.0.5
+modtime = 1609798802.977278000
+
+[app/launcher]
+version = 8.0.5
+modtime = 1609798802.980367000
+
+[lookups/imt_use_cases.csv]
+owner = admin
+version = 8.0.5
+modtime = 1609818409.723628000
+
+[views/imt__correlate_degradations_in_infrastructure_metrics_with_errors_from_logsevents_on_the_host_]
+export = none
+owner = admin
+version = 8.0.5
+modtime = 1609798883.224977000
+
+[views/IMT_Use_Cases]
+export = none
+owner = admin
+version = 8.0.5
+modtime = 1609798912.912971000
+
+[nav/default]
+version = 8.0.5
+modtime = 1609799264.923988000
+
+[savedsearches/Splunk%20IMT%20-%20Host%20Infrastructure%20Monitoring%20-%20Alert%20on%20log%20error%20condition]
+access = read : [ * ], write : [ admin, power ]
+export = none
+owner = admin
+version = 8.0.5
+modtime = 1609817957.934621000
