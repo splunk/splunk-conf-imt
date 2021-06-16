@@ -1,0 +1,11 @@
+| mstats count where index=itsi_im_metrics AND metric_name=Process.* by host, instance span=15m
+| rename instance as process
+
+| eval expected_process_list=mvappend("<PROCESS-TO-CHECK>", "<ANOTHER-PROCESS-TO-CHECK>")
+| eval expected_process_count=<TOTAL-NUMBER-OF-PROCESSES-EXPECTED-PER-HOST>
+
+| eval expected_process_regex="(?i)".mvjoin(expected_process_list, "|")
+| eval expected_process_found=if(match(process, expected_process_regex),1,0)
+| stats sum(expected_process_found) as expected_process_found values(expected_process_count) as expected_process_count by host _time
+| eval val=expected_process_count - expected_process_found
+| table _time val host
