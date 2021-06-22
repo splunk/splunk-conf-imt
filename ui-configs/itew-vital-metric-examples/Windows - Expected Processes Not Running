@@ -1,4 +1,4 @@
-| mstats count where index=itsi_im_metrics AND metric_name=Process.* by host, instance span=15m
+| mstats count where index=*_metrics AND metric_name=Process.* by host, instance span=15m
 | rename instance as process
 
 | eval expected_process_list=mvappend("<PROCESS-TO-CHECK>", "<ANOTHER-PROCESS-TO-CHECK>")
