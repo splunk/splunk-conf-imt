@@ -1,4 +1,4 @@
-| mstats avg(LogicalDisk.%_Free_Space) AS "val" WHERE index=*_metrics instance!="_Total" by host, instance span=1m
+| mstats avg(LogicalDisk.%_Free_Space) AS "val" WHERE index=*_metrics instance=<DISKS-TO-CHECK> instance!="_Total" by host, instance span=1m
 | eval val=round(100-val,2)
 | rename instance as device
 | table _time host device val
