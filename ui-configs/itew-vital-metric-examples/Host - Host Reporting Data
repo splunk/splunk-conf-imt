@@ -1,0 +1,3 @@
+|tstats dc(host) as val max(_time) as _time where index=<INDEXES-TO-CHECK> by host
+|append [|metadata type=hosts index=<INDEXES-TO-CHECK> | table host lastTime | rename lastTime as _time | where _time>now()-(60*60*12) | eval val=0]
+|stats max(val) as val max(_time) as _time by host
