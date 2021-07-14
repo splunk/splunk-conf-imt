@@ -1,0 +1,11 @@
+| mstats count where index=<NIX-METRICS-INDEX> AND metric_name=ps_metric* (NOT COMMAND="[*") by host, COMMAND span=15m
+| rename COMMAND as process
+
+| eval expected_process_list=mvappend("<PROCESS-TO-CHECK>", "<ANOTHER-PROCESS-TO-CHECK>") 
+| eval expected_process_count="<TOTAL-NUMBER-OF-PROCESSES-EXPECTED-PER-HOST>"
+
+| eval expected_process_regex="(?i)".mvjoin(expected_process_list, "|")
+| eval expected_process_found=if(match(process,expected_process_regex),1,0)
+| stats sum(expected_process_found) as expected_process_found values(expected_process_count) as expected_process_count by host _time
+| eval val=expected_process_count - expected_process_found 
+| stats latest(val) as val by host,_time
