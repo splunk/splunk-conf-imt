@@ -37,7 +37,7 @@ resource "signalfx_detector" "cpu-nearing-capacity" {
   name         = "${var.sim_prefix} CPU Utilization Nearing Capacity (Static)"
   description  = "Alerts when cpu.utilization is above 95% for 5m or more"
   program_text = <<-EOF
-  A = data('cpu.utilization', filter=filter('host', '<HOSTS-TO-CHECK>')).publish(label='A')
+  A = data('cpu.utilization', filter=filter('host.name', '<HOSTS-TO-CHECK>')).publish(label='A')
   detect(when(A > threshold(95), lasting='5m')).publish("${var.sim_prefix} CPU Utilization Nearing Capacity (Static)")
   EOF
   rule {
